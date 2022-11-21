@@ -1,0 +1,20 @@
+22a23,30
+>   -- MIDI bridge node properties
+>   ["alsa.midi.node-properties"] = {
+>     -- Name set for the node with ALSA MIDI ports
+>     ["node.name"] = "Midi-Bridge",
+>     -- Removes longname/number from MIDI port names
+>     --["api.alsa.disable-longname"] = true,
+>   },
+> 
+42c50
+<   apply_properties = {
+---
+>   --  apply_properties = {
+44,45c52
+<   ["api.alsa.headroom"] = 1024,
+<   },
+---
+>   --  },
+127a135
+>       --["dither.method"]          = "none",  -- "rectangular", "triangular" or "shaped5"
