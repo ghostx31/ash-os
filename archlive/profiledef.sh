@@ -24,4 +24,5 @@ file_permissions=(
   ["/usr/local/bin/Installation_guide"]="0:0:755"
   ["/usr/local/bin/livecd-sound"]="0:0:755"
   ["/home/liveuser/.automated.sh"]="0:0:755"
+  ["/root/move-sudoers.sh"]="0:0:755"
 )
