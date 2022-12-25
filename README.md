@@ -5,19 +5,19 @@ This is the build system for the ASH OS project. The build directory is containe
 
 ### Description for all the folders present inside the build directory
 - `airootfs`: Contains the copy of the file system which will be copied over to the RAM when the ISO boots up. 
-- efiboot/loader: Contains files for EFI booting. 
-- grub: For booting with grub. 
-- syslinux: For booting systems with legacy partition tables. 
-- bootstrap\_packages.x86\_64: List of packages to use when booting the system in the bootstrap mode. 
-- mirrorlist: Contains the mirrors for Arch Linux packages. 
-- chaotic-mirrorlist: Contains the mirrors for chaotic-aur repository. 
-- packages.x86\_64: Contains packages which are installed inside the ISO. 
-- pacman.conf: Pacman config file used to build the ISO. 
-- profiledef.sh: Provides configuration for the build system. Also defines the permissions for files in the directory. 
+- `efiboot/loader`: Contains files for EFI booting. 
+- `grub`: For booting with grub. 
+- `syslinux`: For booting systems with legacy partition tables. 
+- `bootstrap\_packages.x86\_64`: List of packages to use when booting the system in the bootstrap mode. 
+- `mirrorlist`: Contains the mirrors for Arch Linux packages. 
+- `chaotic-mirrorlist`: Contains the mirrors for chaotic-aur repository. 
+- `packages.x86\_64`: Contains packages which are installed inside the ISO. 
+- `pacman.conf`: Pacman config file used to build the ISO. 
+- `profiledef.sh`: Provides configuration for the build system. Also defines the permissions for files in the directory. 
 
 
 ### Files added to airootfs
-- `etc/skel/`: The skel directory contains files which are moved over to a new user's home directory. ***Files added in skel***
+- `etc/skel/`: The skel directory contains files which are moved over to a new user's home directory. ***Files added in skel:***
   - `.config`: Config files for applications. 
     - `wezterm/`: Config file for the wezterm terminal emulator.
 - `pacman.d/`: Holds the mirrorlist for the repositories used to install packages. 
