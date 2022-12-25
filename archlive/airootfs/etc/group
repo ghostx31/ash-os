@@ -1,9 +1,9 @@
 root:x:0:root
-adm:x:4:liveuser
-wheel:x:10:liveuser
-storage:x:987:liveuser
-video:x:985:liveuser
-power:x:98:liveuser
-audio:x:996:liveuser
-liveuser:x:1000:liveuser
+adm:x:4:AshOS
+wheel:x:10:AshOS
+storage:x:987:AshOS
+video:x:985:AshOS
+power:x:98:AshOS
+audio:x:996:AshOS
+AshOS:x:1000:AshOS
 

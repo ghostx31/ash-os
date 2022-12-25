@@ -8,7 +8,6 @@ bind
 brltty
 broadcom-wl
 btrfs-progs
-clonezilla
 cloud-init
 cryptsetup
 darkhttpd
@@ -51,15 +50,12 @@ linux
 linux-atm
 linux-firmware
 linux-firmware-marvell
-livecd-sounds
 lsscsi
 lvm2
-lynx
 man-db
 man-pages
 mc
 mdadm
-memtest86+
 mkinitcpio
 mkinitcpio-archiso
 mkinitcpio-nfs-utils
@@ -75,10 +71,7 @@ ntfs-3g
 nvme-cli
 open-iscsi
 open-vm-tools
-openconnect
 openssh
-openvpn
-partclone
 parted
 partimage
 pcsclite
@@ -86,7 +79,6 @@ ppp
 pptpclient
 pv
 qemu-guest-agent
-refind
 reflector
 reiserfsprogs
 rp-pppoe
@@ -184,7 +176,6 @@ networkmanager
 network-manager-applet
 gnome-tweaks
 wireplumber
-wezterm
 ttf-jetbrains-mono
 noto-fonts-emoji
 noto-fonts-cjk
@@ -196,3 +187,5 @@ easyeffects
 paru
 wine-staging
 bottles
+memtest86+
+kitty
