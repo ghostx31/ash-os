@@ -1,0 +1,6 @@
+{
+    "device": "alsa_output.pci-0000_05_00.6.analog-stereo",
+    "device-description": "Family 17h/19h HD Audio Controller Analog Stereo",
+    "device-profile": "analog-output-speaker",
+    "preset-name": "Perfect EQ"
+}
