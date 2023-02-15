@@ -1,0 +1,8 @@
+[org/gnome/desktop/interface]
+clock-format='12h'
+color-scheme='prefer-dark'
+cursor-theme='Catppuccin-Mocha-Mauve-Cursors'
+enable-animations=true
+gtk-theme='Catppuccin-Mocha-Standard-Mauve-dark'
+icon-theme='Tela Dark'
+show-battery-percentage=true

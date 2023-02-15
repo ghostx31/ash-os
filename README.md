@@ -1,7 +1,5 @@
 # ASH OS 
-
-
-This is the build system for the ASH OS project. The build directory is contained in the `archlive` directory. 
+This is the build system for the ASH OS project. The build directory is contained in the `archiso` directory. 
 
 ### Description for all the folders present inside the build directory
 - `airootfs`: Contains the copy of the file system which will be copied over to the RAM when the ISO boots up. 
@@ -19,7 +17,6 @@ This is the build system for the ASH OS project. The build directory is containe
 ### Files added to airootfs
 - `etc/skel/`: The skel directory contains files which are moved over to a new user's home directory. ***Files added in skel:***
   - `.config`: Config files for applications. 
-    - `wezterm/`: Config file for the wezterm terminal emulator.
 - `pacman.d/`: Holds the mirrorlist for the repositories used to install packages. 
 - `group`: File which defines the groups for users. 
 - `gshadow`: Shadow file determining the groups.
@@ -29,9 +26,9 @@ This is the build system for the ASH OS project. The build directory is containe
 - `shadow`: Define passwords user to be used in the live environment. 
 
 ### Installing and building the ISO locally
-- On Arch Linux, install the `archiso` package. 
-- From inside the build directory, run the command: `mkarchiso -v -w /tmp/archiso-tmp <location-of-build-directory>`
+- On Arch Linux, install the `archiso` and `just` packages. 
+- From the root of the directory, run the command: `just build`
 - The built ISO is created in the `out/` directory in the root of the build directory. 
-- To run the built ISO, run the command: `run_archiso -i out/ashos-<date>.<arch>.iso`.
-  - To run the ISO in UEFI mode, use the command: `run_archiso -u -i out/ashos-<data><arch>.iso`.
+- To run the built ISO, run the command: `just run`.
+- Before rebuilding the ISO, be sure to remove the `build` directory by running `just clean`.
 

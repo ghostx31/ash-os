@@ -1,0 +1,8 @@
+[org/gnome/desktop/interface]
+clock-format='12h'
+color-scheme='prefer-dark'
+enable-animations=true
+gtk-theme='Catppuccin-Mocha-Standard-Lavender-dark'
+icon-theme='Tela Dark'
+show-battery-percentage=true
+picture-uri='file:///usr/share/backgrounds/forrest.png'

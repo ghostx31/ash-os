@@ -1,0 +1,16 @@
+root:x:0:root
+sys:x:3:bin,AshOS
+network:x:90:AshOS
+power:x:98:AshOS
+adm:x:999:AshOS
+wheel:x:998:AshOS
+uucp:x:987:AshOS
+optical:x:990:AshOS
+rfkill:x:983:AshOS
+video:x:986:AshOS
+storage:x:988:AshOS
+audio:x:995:AshOS
+users:x:985:AshOS
+nopasswdlogin:x:966:AshOS
+autologin:x:967:AshOS
+AshOS:x:1000:
