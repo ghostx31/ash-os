@@ -29,7 +29,6 @@ fsarchiver
 gpart
 gpm
 gptfdisk
-grml-zsh-config
 grub
 hdparm
 hyperv
@@ -44,13 +43,11 @@ lftp
 libfido2
 libusb-compat
 linux
-linux-atm
 linux-firmware
 linux-firmware-marvell
 livecd-sounds
 lsscsi
 lvm2
-lynx
 man-db
 man-pages
 mc
@@ -83,12 +80,10 @@ ppp
 pptpclient
 pv
 qemu-guest-agent
-refind
 reflector
 reiserfsprogs
 rp-pppoe
 rsync
-rxvt-unicode-terminfo
 screen
 sdparm
 sg3_utils
@@ -96,7 +91,6 @@ smartmontools
 sof-firmware
 squashfs-tools
 sudo
-syslinux
 systemd-resolvconf
 tcpdump
 terminus-font
@@ -194,10 +188,7 @@ adobe-source-code-pro-fonts
 easyeffects
 paru
 wine-staging
-bottles
-memtest86+
 kitty
-bitwarden
 fish
 starship
 bat
@@ -205,3 +196,10 @@ exa
 binder_linux-dkms
 waydroid
 linux-headers
+bottles
+firefox
+bitwarden
+heroic-games-launcher-bin
+syslinux
+bluez
+bluez-utils

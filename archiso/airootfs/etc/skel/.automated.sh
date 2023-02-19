@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
@@ -16,6 +16,6 @@ ln -sf /home/$USER/.themes/Catppuccin-Mocha-Standard-Lavender-Dark/gtk-4.0/ /hom
 # gsettings set org.gnome.desktop.interface icon-theme "Catppuccin-mocha"
 gsettings set org.gnome.desktop.interface.icon-theme "Tela-dark"
 
-gsettings set org.gnome.desktop.background picture-uri-dark "file:///home/AshOS/.themes/wallpapers/forrest.png"
+gsettings set org.gnome.desktop.background picture-uri-dark "file:///home/$USER/.themes/wallpapers/forrest.png"
 
 

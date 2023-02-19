@@ -6,3 +6,6 @@ enable-animations=true
 gtk-theme='Catppuccin-Mocha-Standard-Mauve-dark'
 icon-theme='Tela Dark'
 show-battery-percentage=true
+
+[org/gnome/desktop/background]
+picture-uri='file:///home/$USER/.themes/wallpapers/forrest.png'

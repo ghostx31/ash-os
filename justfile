@@ -1,4 +1,4 @@
-date := `date +%Y.%m.%d`
+date := `date +%m.%d`
 build: 
   sudo mkarchiso -v -w build/ archiso/
 

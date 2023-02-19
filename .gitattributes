@@ -1,0 +1,1 @@
+local-repo/local/repo/heroic-games-launcher-bin-2.6.2-1-x86_64.pkg.tar.zst filter=lfs diff=lfs merge=lfs -text
