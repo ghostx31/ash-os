@@ -2,9 +2,9 @@
 # shellcheck disable=SC2034
 
 iso_name="ashos"
-iso_label="ARCH_$(date +%Y%m)"
-iso_publisher="Arch Linux <https://archlinux.org>"
-iso_application="Arch Linux Live/Rescue CD"
+iso_label="ASHOS_$(date +%Y%m)"
+iso_publisher="Ash OS <https://github.com/ghostx31/ash-os>"
+iso_application="Ash OS installation Disk"
 iso_version="$(date +%m.%d)"
 install_dir="arch"
 buildmodes=('iso')
@@ -19,12 +19,7 @@ file_permissions=(
   ["/etc/shadow"]="0:0:400"
   ["/root"]="0:0:750"
   ["/usr/local/bin/choose-mirror"]="0:0:755"
-  ["/usr/local/bin/Installation_guide"]="0:0:755"
-  ["/usr/local/bin/livecd-sound"]="0:0:755"
   ["/etc/polkit-1/rules.d"]="0:0:750"
   ["/etc/sudoers.d"]="0:0:750"
-  ["/usr/local/bin/alci-make-a-pure-arch"]="0:0:755"
-  ["/usr/local/bin/alci-displaymanager-check"]="0:0:755"
-  ["/usr/local/bin/get-nemesis-on-alci"]="0:0:755"
   ["/etc/skel/.automated.sh"]="0:0:755"
 )
