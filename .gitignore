@@ -1,3 +1,2 @@
 out/
-archlive/out/
-archlive/airootfs/etc/sudoers
+build/
