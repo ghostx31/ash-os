@@ -11,7 +11,7 @@ gsettings set org.gnome.shell.extensions.user-theme name "Catppuccin-Mocha-Stand
 
 mkdir -p /home/$USER/.config/gtk-4.0
 
-ln -sf /home/$USER/.themes/Catppuccin-Mocha-Standard-Lavender-Dark/gtk-4.0/ /home/$USER/.config/gtk-4.0
+ln -sf /home/$USER/.themes/Catppuccin-Mocha-Standard-Lavender-Dark/gtk-4.0/* /home/$USER/.config/gtk-4.0
 
 # gsettings set org.gnome.desktop.interface icon-theme "Catppuccin-mocha"
 gsettings set org.gnome.desktop.interface.icon-theme "Tela-dark"

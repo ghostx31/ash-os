@@ -6,7 +6,6 @@ b43-fwcutter
 base
 bind
 brltty
-broadcom-wl
 btrfs-progs
 cryptsetup
 darkhttpd
@@ -65,14 +64,12 @@ nfs-utils
 nilfs-utils
 nmap
 ntfs-3g
-nvme-cli
 open-iscsi
 open-vm-tools
 openssh
 parted
 partimage
 pcsclite
-ppp
 pptpclient
 pv
 qemu-guest-agent
@@ -87,7 +84,6 @@ smartmontools
 sof-firmware
 squashfs-tools
 sudo
-systemd-resolvconf
 tcpdump
 terminus-font
 testdisk
@@ -96,7 +92,6 @@ usb_modeswitch
 usbmuxd
 usbutils
 vim
-virtualbox-guest-utils-nox
 wireless-regdb
 wireless_tools
 wpa_supplicant
@@ -112,7 +107,6 @@ make
 xorg-xkill
 xorg-xrdb
 os-prober
-#virtualbox-guest-utils
 git
 networkmanager
 xorg-xdpyinfo
