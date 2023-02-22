@@ -50,7 +50,6 @@ lsscsi
 lvm2
 man-db
 man-pages
-mc
 mdadm
 memtest86+
 memtest86+-efi
@@ -69,10 +68,7 @@ ntfs-3g
 nvme-cli
 open-iscsi
 open-vm-tools
-openconnect
 openssh
-openvpn
-partclone
 parted
 partimage
 pcsclite
@@ -95,7 +91,6 @@ systemd-resolvconf
 tcpdump
 terminus-font
 testdisk
-tmux
 udftools
 usb_modeswitch
 usbmuxd
@@ -115,7 +110,6 @@ bash-completion
 dex
 make
 xorg-xkill
-xterm
 xorg-xrdb
 os-prober
 #virtualbox-guest-utils
@@ -187,12 +181,7 @@ chaotic-aur/chaotic-keyring
 adobe-source-code-pro-fonts
 easyeffects
 paru
-wine-staging
 kitty
-fish
-starship
-bat
-exa
 binder_linux-dkms
 waydroid
 linux-headers
@@ -204,3 +193,4 @@ syslinux
 bluez
 bluez-utils
 tlp
+ufw
