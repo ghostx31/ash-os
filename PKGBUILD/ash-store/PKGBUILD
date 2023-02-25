@@ -1,0 +1,23 @@
+pkgname=ash-store
+_pkgname=ash
+pkgver=0.0.4
+pkgrel=1
+pkgdesc="ASH Store"
+arch=('x86_64')
+url="https://github.com/ghostx31/ash-store"
+license=('MIT')
+depends=('electron')
+source=("$pkgname::git+$url.git")
+sha256sums=('SKIP')
+
+package() {
+  cd "$srcdir/$pkgname"
+  install -d "$pkgdir"/opt/$pkgname
+  cp -r * "$pkgdir"/opt/$pkgname
+  chmod 755 "$pkgdir"/opt/$pkgname/$_pkgname
+  install -d "$pkgdir"/usr/{bin,share/{pixmaps,applications}}
+  ln -s "$pkgdir"/opt/$pkgname/$_pkgname "$pkgdir"/usr/bin/$_pkgname
+  install -Dm0644 "$pkgdir"/opt/$pkgname/resources/icon.png "$pkgdir"/usr/share/pixmaps/ash-store.png
+  install -Dm0644 "$pkgdir"/opt/$pkgname/resources/$pkgname.desktop "$pkgdir"/usr/share/applications/$_pkgname.desktop
+}
+
