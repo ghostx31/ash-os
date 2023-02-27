@@ -25,5 +25,5 @@ file_permissions=(
   ["/usr/local/bin/alci-make-a-pure-arch"]="0:0:755"
   ["/usr/local/bin/alci-displaymanager-check"]="0:0:755"
   ["/usr/local/bin/waydroid-aurora.sh"]="0:0:755"
-  ["/home/liveuser/symlink-theme.sh"]="0:0:755"
+  ["/etc/skel/symlink-theme.sh"]="0:0:755"
 )
