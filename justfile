@@ -7,3 +7,6 @@ clean:
 
 run:
   run_archiso -u -i out/ashos-{{ date }}-x86_64.iso
+
+install:
+  sudo pacman -S - < pkglist.txt --needed

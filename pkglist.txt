@@ -1,0 +1,3 @@
+qemu-desktop
+edk2-ovmf
+archiso
