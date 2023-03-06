@@ -5,7 +5,6 @@ archinstall
 b43-fwcutter
 base
 bind
-brltty
 btrfs-progs
 cryptsetup
 dex
@@ -29,10 +28,8 @@ gpm
 gptfdisk
 grub
 hdparm
-hyperv
 intel-ucode
 iw
-iwd
 jfsutils
 kitty-terminfo
 less
@@ -57,17 +54,13 @@ mtools
 ndisc6
 nfs-utils
 nilfs-utils
-nmap
 ntfs-3g
 open-iscsi
-open-vm-tools
 openssh
 parted
 partimage
 pcsclite
-pptpclient
 pv
-qemu-guest-agent
 reflector
 reiserfsprogs
 rsync
@@ -87,8 +80,6 @@ wpa_supplicant
 xfsprogs
 xl2tpd
 zsh
-#alci-calamares
-#alci-calamares-config-pure
 bash-completion
 make
 xorg-xkill
