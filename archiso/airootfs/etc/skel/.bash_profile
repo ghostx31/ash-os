@@ -1,1 +1,0 @@
-./.symlink-theme.sh

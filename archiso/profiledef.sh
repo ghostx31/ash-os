@@ -21,7 +21,5 @@ file_permissions=(
   ["/usr/local/bin/choose-mirror"]="0:0:755"
   ["/etc/polkit-1/rules.d"]="0:0:750"
   ["/etc/sudoers.d"]="0:0:750"
-  ["/etc/skel/.automated.sh"]="0:0:755"
-  ["/usr/local/bin/waydroid-aurora.sh"]="0:0:755"
-  ["/etc/skel/.symlink-theme.sh"]="0:0:755"
+  ["/etc/skel/.symlink-theme.fish"]="0:0:755"
 )
