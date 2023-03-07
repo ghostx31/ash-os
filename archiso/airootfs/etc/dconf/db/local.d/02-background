@@ -1,0 +1,3 @@
+[org/gnome/desktop/background]
+picture-uri-dark='file:///usr/local/backgrounds/bg.png'
+picture-uri='file:///usr/local/backgrounds/bg.png'

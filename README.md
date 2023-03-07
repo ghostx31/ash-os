@@ -24,7 +24,7 @@ This is the build system for the ASH OS project. The build directory is containe
 - `shadow`: Define passwords user to be used in the live environment. 
 
 ### Installing and building the ISO locally
-- On Arch Linux, install the `archiso` and `just` packages. Additionally, install `qemu-desktop` and `edk2-ovmf` packages if you plan on trying to run the built ISO with the `just run` command.
+- To install the dependencies required to build and run the ISO, install the `just` package and run `just install`.
 - From the root of the directory, run the command: `just build`
 - The built ISO is created in the `out/` directory in the root of the build directory. 
 - To run the built ISO, run the command: `just run`.
