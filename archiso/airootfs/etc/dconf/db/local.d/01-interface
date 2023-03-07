@@ -3,9 +3,12 @@ clock-format='12h'
 color-scheme='prefer-dark'
 enable-animations=true
 gtk-theme='Catppuccin-Mocha-Standard-Mauve-Dark'
-icon-theme='Tela-dark'
+icon-theme='Papirus-Dark'
 show-battery-percentage=true
 
-[org/shell/extensions/user-theme]
+[org/gnome/desktop/wm/preferences]
+theme='Catppuccin-Mocha-Standard-Mauve-Dark'
+
+[org/gnome/shell/extensions/user-theme]
 name='Catppuccin-Mocha-Standard-Mauve-Dark'
 

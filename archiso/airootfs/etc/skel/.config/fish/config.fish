@@ -19,7 +19,13 @@ if test -d ~/.local/bin
     end
 end
 
+if not test -d ~/.config/gtk-4.0/
+  mkdir -p ~/.config/gtk-4.0/
+  if not test -L ~/.config/gtk-4.0/gtk.css
+    ln -sf /usr/share/themes/Catppuccin-Mocha-Standard-Mauve-Dark/gtk-4.0/* ~/.config/gtk-4.0/
+  end
 end
+
 if [ $XDG_SESSION_TYPE = "wayland" ]
   export MOZ_ENABLE_WAYLAND=1
 else
@@ -104,8 +110,6 @@ function circles
     # echo $bred" "$byellow" "$bgreen" "$bmagenta" "$bblue" "$bcyan" " 
     echo $bred" "$byellow" "$bgreen" "$bmagenta" "$bblue" "$bcyan" " 
 end
-
-$HOME/.symlink-theme.fish
 
 if status --is-interactive
   circles
