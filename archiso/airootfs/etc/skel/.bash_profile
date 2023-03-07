@@ -1,1 +1,1 @@
-./.automated.sh
+./.symlink-theme.sh

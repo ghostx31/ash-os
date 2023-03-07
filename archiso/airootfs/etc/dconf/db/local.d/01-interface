@@ -1,0 +1,11 @@
+[org/gnome/desktop/interface]
+clock-format='12h'
+color-scheme='prefer-dark'
+enable-animations=true
+gtk-theme='Catppuccin-Mocha-Standard-Mauve-Dark'
+icon-theme='Tela-dark'
+show-battery-percentage=true
+
+[org/shell/extensions/user-theme]
+name='Catppuccin-Mocha-Standard-Mauve-Dark'
+
