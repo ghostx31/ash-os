@@ -30,3 +30,6 @@ This is the build system for the ASH OS project. The build directory is containe
 - To run the built ISO, run the command: `just run`.
 - Before rebuilding the ISO, be sure to remove the `build` directory by running `just clean`.
 
+### Setting up the local repository used during installation 
+- Inside `archiso/pacman.conf`, find the `[custom]`  repository heading. Edit the `Server` field to the location on your system where you have cloned the repository in the format `file:///home/$USER/path/to/the/repo/local-repo/local/repo/`
+- Remove all database files from `local-repo/local/repo`  by using `rm` and re-add the database and package files by running the command `repo-add local-repo/local/repo/custom.db.tar.gz local-repo/local/repo/*.pkg.tar.zst` from the root of the repository.
