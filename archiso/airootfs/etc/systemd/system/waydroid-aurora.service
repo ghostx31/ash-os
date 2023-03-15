@@ -1,0 +1,10 @@
+[Unit]
+Description=Waydroid Aurora init service
+After=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/waydroid-aurora
+ConditionFirstBoot=true
+
+[Install]
+WantedBy=multi-user.target
