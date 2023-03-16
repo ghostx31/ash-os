@@ -165,6 +165,7 @@ syslinux
 bluez
 bluez-utils
 tlp
+envycontrol
 ufw
 neovim
 catppuccin-gtk-theme-mocha
