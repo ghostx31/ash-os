@@ -1,2 +1,2 @@
 [org/gnome/shell]
-enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'GPU_profile_selector@lorenzo9904.gmail.com']
