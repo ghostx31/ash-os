@@ -18,7 +18,7 @@ jobs:
       - name: Build Docker container 
         run: |
           docker build --rm --network=host -t ash-os:latest .
-          docker run --rm -it --privileged -v $HOME/docker/volumes/ash-os:/build/out ash-os:latest build
+          docker run --rm --privileged -v $HOME/docker/volumes/ash-os:/build/out ash-os:latest build
       - name: Create ISO release 
         id: create_release
         uses: softprops/action-gh-release@v1
