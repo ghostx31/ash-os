@@ -18,9 +18,22 @@ jobs:
       - name: Build Docker container 
         run: |
           docker build --rm --network=host -t ash-os:latest .
-          docker run --rm -it --privileged -v $HOME/docker/volumes/ash-os:/build/out ash-os:latest build
-      - name: Create ISO release 
-        id: create_release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: $HOME/docker/volumes/ash-os/*.iso
+          # docker run --rm -it --privileged -v $HOME/docker/volumes/ash-os:/build/out ash-os:latest
+          # docker run -d --privileged -v $(pwd)/out:/build/out ash-os:latest
+      - name: Run Docker container 
+        run: | 
+          docker run -v $(pwd)/out:/build/out --privileged ash-os:latest
+      # - name: Copy shit 
+      #   run: |
+      #     docker cp $(docker ps -q -n 1):/build/out/. $(pwd)/out
+      - name: List files
+        run: |
+          ls -la 
+      - name: ls ISO
+        run: |
+          ls $(pwd)/out
+      # - name: Create ISO release 
+      #   id: create_release
+      #   uses: softprops/action-gh-release@v1
+      #   with:
+      #     files: $HOME/docker/volumes/ash-os/*.iso
