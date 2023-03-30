@@ -1,6 +1,6 @@
 date := `date +%m.%d`
 build: 
-  sudo mkarchiso -v -w build/ archiso/
+  mkarchiso -v -w build/ archiso/
 
 clean:
   sudo rm -rf build/
