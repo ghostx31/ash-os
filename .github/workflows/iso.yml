@@ -23,17 +23,8 @@ jobs:
       - name: Run Docker container 
         run: | 
           docker run -v $(pwd)/out:/build/out --privileged ash-os:latest
-      # - name: Copy shit 
-      #   run: |
-      #     docker cp $(docker ps -q -n 1):/build/out/. $(pwd)/out
-      - name: List files
-        run: |
-          ls -la 
-      - name: ls ISO
-        run: |
-          ls $(pwd)/out
-      # - name: Create ISO release 
-      #   id: create_release
-      #   uses: softprops/action-gh-release@v1
-      #   with:
-      #     files: $HOME/docker/volumes/ash-os/*.iso
+      - name: Create ISO release 
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: out/*.iso
