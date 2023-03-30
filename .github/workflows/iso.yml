@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Build ISOs 
+
+on:
+  push:
+    tags:
+      - "*"
+  workflow_dispatch:
+    
+
+jobs:
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Build Docker container 
+        run: |
+          docker build --rm --network=host -t ash-os:latest .
+          docker run --rm -it --privileged -v $HOME/docker/volumes/ash-os:/build/out ash-os:latest build
+      - name: Create ISO release 
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: $HOME/docker/volumes/ash-os/*.iso
