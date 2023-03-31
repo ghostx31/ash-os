@@ -17,4 +17,7 @@ RUN ls local/repo
 RUN repo-add -n -R local/repo/ashos-repo.db.tar.gz local/repo/*.pkg.tar.zst
 COPY ./archiso ./archiso/
 COPY ./justfile .
-ENTRYPOINT [ "just" ]
+COPY ./init.sh .
+ENTRYPOINT [ "./init.sh" ]
+# ENTRYPOINT [ "just", "build" ]
+# ENTRYPOINT [ "tail", "-f", "/dev/null" ]
