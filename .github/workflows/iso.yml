@@ -20,8 +20,6 @@ jobs:
       - name: Build Docker container 
         run: |
           docker build --rm --network=host -t ash-os:latest .
-          # docker run --rm -it --privileged -v $HOME/docker/volumes/ash-os:/build/out ash-os:latest
-          # docker run -d --privileged -v $(pwd)/out:/build/out ash-os:latest
       - name: Run Docker container 
         run: | 
           docker run -v $(pwd)/out:/build/out --privileged ash-os:latest

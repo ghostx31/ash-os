@@ -1,7 +1,7 @@
 pkgname=ashos-calamares-config
 _destname1="/etc"
 pkgver=0.4
-pkgrel=1
+pkgrel=2
 pkgdesc="calamares for Ash OS"
 arch=('any')
 url="https://github.com/ghostx31/ash-calamares"
