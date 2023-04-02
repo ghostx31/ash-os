@@ -2,9 +2,12 @@
 Description=Waydroid Aurora init service
 After=network-online.target
 ConditionPathExists=/var/lib/waydroid/waydroid_base.prop
+ConditionFirstBoot=true
 
 [Service]
 Type=oneshot
+RemainAfterExit=true
+ExecStartPre=/usr/bin/sh -c 'until ping -c1 archlinux.org; do sleep 1; done;'
 ExecStart=/usr/bin/curl -fsSL https://gitlab.com/AuroraOSS/AuroraStore/uploads/bbc1bd5a77ab2b40bbf288ccbef8d1f0/AuroraStore_4.1.1.apk -o /tmp/AuroraStore.apk
 ExecStart=/usr/bin/waydroid app install /tmp/AuroraStore.apk
 
