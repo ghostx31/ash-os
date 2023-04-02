@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          submodules: true
       - name: Build Docker container 
         run: |
           docker build --rm --network=host -t ash-os:latest .
