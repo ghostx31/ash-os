@@ -19,5 +19,3 @@ COPY ./archiso ./archiso/
 COPY ./justfile .
 COPY ./init.sh .
 ENTRYPOINT [ "./init.sh" ]
-# ENTRYPOINT [ "just", "build" ]
-# ENTRYPOINT [ "tail", "-f", "/dev/null" ]
