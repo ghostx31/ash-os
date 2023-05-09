@@ -2,3 +2,6 @@
 	path = archiso/airootfs/etc/skel/.local/share/lunarvim/lvim
 	url = https://github.com/lunarvim/lunarvim
 	branch = release-1.3/neovim-0.9
+[submodule "archiso/airootfs/etc/skel/.local/share/lunarvim/site/pack/lazy/opt/lazy.nvim"]
+	path = archiso/airootfs/etc/skel/.local/share/lunarvim/site/pack/lazy/opt/lazy.nvim
+	url = https://github.com/folke/lazy.nvim
