@@ -8,6 +8,42 @@ lvim.builtin.bufferline.options.always_show_bufferline = "true"
 lvim.builtin.treesitter.rainbow.enable = true
 lvim.builtin.bufferline.options.separator_style = "slant"
 lvim.builtin.bufferline.options.right_mouse_command = "bdelete! %d"
+local header = {
+  type = "text",
+  val = {
+    "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣶⣶⣿⣿⣿⣿⣶⣶⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+    "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+    "⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀",
+    "⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀",
+    "⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀ ",
+    "⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⡿⠿⠛⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠟⠛⠿⢿⣿⣿⣿⡇⠀⠀⠀⠀⠀ ",
+    "⠀⠀⠀⠀⠀⠀⢸⣿⣿⠏⣠⣤⡄⣠⣤⡌⢿⣿⣿⣿⣿⡿⢁⣤⣄⢀⣤⣄⠹⣿⣿⡇⠀⠀⠀⠀⠀ ",
+    "⠀⠀⠀⠀⠀⠀⠸⣿⣿⠀⢿⣿⣿⣿⣿⡟⢸⣿⣿⣿⣿⡇⠸⣿⣿⣿⣿⡿⠀⣿⣿⠇⠀⠀⠀⠀⠀ ",
+    "⠀⠀⠀⠀⠀⠀⠀⢻⣿⣆⠀⠙⠿⠟⠋⢀⣾⣿⣿⣿⣿⣷⡀⠈⠻⡿⠋⠁⣰⣿⡟⠀⠀⠀⠀⠀⠀⠀",
+    "⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣶⣶⣶⣾⣿⣿⡿⠋⠙⢿⣿⣿⣷⣶⣶⣶⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀",
+    "⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⢁⣴⣧⡀⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀",
+    "⠀⠀⠀⠀⠀⠀⠀⠀⠙⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠋⠀⠀⠀⠀⠀⠀⠀⠀",
+    "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+    "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⠙⠛⠙⠛⠛⠋⠛⠋⠛⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+  },
+  opts = {
+    position = "center",
+    hl = "Label",
+  },
+}
+lvim.builtin.alpha.dashboard.section.header = header
+local text = require "lvim.interface.text"
+lvim.builtin.alpha.dashboard.section.footer = {
+  type = "text",
+  val = text.align_center({ width = 0 }, {
+    "",
+    "High on Copium 🤡️",
+  }, 0.5),
+  opts = {
+    position = "center",
+    hl = "Number"
+  },
+}
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 lvim.keys.insert_mode = {
@@ -15,10 +51,9 @@ lvim.keys.insert_mode = {
 }
 vim.g.localleader = "\\"
 vim.g.termguicolors = true
--- vim.set.mouse = "r"
 
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-vim.o.guifont = "CartographCF Nerd Font"
+vim.o.guifont = "JetBrainsMono Nerd Font"
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "c",
@@ -43,8 +78,8 @@ lvim.plugins = {
   { "junegunn/vim-emoji" },
   { "ggandor/lightspeed.nvim" },
   { "catppuccin/nvim",
-    as = "catppuccin",
-    run = ":CatppuccinCompile",
+    name = "catppuccin",
+    build = ":CatppuccinCompile",
     config = function()
       vim.g.catppuccin_flavour = "mocha"
       require("catppuccin").setup()
@@ -52,10 +87,10 @@ lvim.plugins = {
     end
   },
   { "andweeb/presence.nvim" },
-  { "github/copilot.vim" },
+  -- { "github/copilot.vim" },
   { "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" },
+    build = "cd app && npm install",
+    init = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" },
   },
   { "fatih/vim-go" },
   { "p00f/nvim-ts-rainbow",
@@ -106,7 +141,7 @@ require("catppuccin").setup({
   dim_inactive = {
     enabled = false,
   },
-  transparent_background = false,
+  transparent_background = true,
   term_colors = true,
   compile = {
     enabled = true,
@@ -115,6 +150,13 @@ require("catppuccin").setup({
   styles = {
     comments = { "italic" },
     conditionals = { "italic" },
+  },
+  color_overrides = {
+    mocha = {
+      base = "#000000",
+      mantle = "#010101",
+      crust = "#020202",
+    },
   },
   integrations = {
     treesitter = true,
@@ -252,16 +294,16 @@ require("presence"):setup({
 })
 
 -- require 'lspconfig'.marksman.setup {}
-require("indent_blankline").setup {
-  show_current_context = true,
-  show_current_context_start = true,
-  space_char_blankline = " ",
-  char_highlight_list = {
-    "IndentBlanklineIndent1",
-    "IndentBlanklineIndent2",
-    "IndentBlanklineIndent3",
-    "IndentBlanklineIndent4",
-    "IndentBlanklineIndent5",
-    "IndentBlanklineIndent6",
-  },
-}
+-- require("indent_blankline").setup {
+--   show_current_context = true,
+--   show_current_context_start = true,
+--   space_char_blankline = " ",
+--   -- char_highlight_list = {
+--   --   "IndentBlanklineIndent1",
+--   --   "IndentBlanklineIndent2",
+--   --   "IndentBlanklineIndent3",
+--   --   "IndentBlanklineIndent4",
+--   --   "IndentBlanklineIndent5",
+--   --   "IndentBlanklineIndent6",
+--   -- },
+-- }
