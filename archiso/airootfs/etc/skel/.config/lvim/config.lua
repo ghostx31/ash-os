@@ -8,17 +8,18 @@ lvim.builtin.bufferline.options.always_show_bufferline = "true"
 lvim.builtin.treesitter.rainbow.enable = true
 lvim.builtin.bufferline.options.separator_style = "slant"
 lvim.builtin.bufferline.options.right_mouse_command = "bdelete! %d"
+
 -- keymappings [view all the defaults by pressing <leader>Lk]
+
 lvim.leader = "space"
 lvim.keys.insert_mode = {
   ["jk"] = "<Esc>",
 }
 vim.g.localleader = "\\"
 vim.g.termguicolors = true
--- vim.set.mouse = "r"
 
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-vim.o.guifont = "CartographCF Nerd Font"
+vim.o.guifont = "JetBrainsMono Nerd Font"
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "c",
@@ -43,19 +44,17 @@ lvim.plugins = {
   { "junegunn/vim-emoji" },
   { "ggandor/lightspeed.nvim" },
   { "catppuccin/nvim",
-    as = "catppuccin",
-    run = ":CatppuccinCompile",
+    name = "catppuccin",
+    build = ":CatppuccinCompile",
     config = function()
       vim.g.catppuccin_flavour = "mocha"
       require("catppuccin").setup()
       vim.cmd "colorscheme catppuccin"
     end
   },
-  { "andweeb/presence.nvim" },
-  { "github/copilot.vim" },
   { "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" },
+    build = "cd app && npm install",
+    init = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" },
   },
   { "fatih/vim-go" },
   { "p00f/nvim-ts-rainbow",
@@ -106,7 +105,7 @@ require("catppuccin").setup({
   dim_inactive = {
     enabled = false,
   },
-  transparent_background = false,
+  transparent_background = true,
   term_colors = true,
   compile = {
     enabled = true,
@@ -162,106 +161,3 @@ require("catppuccin").setup({
 })
 vim.cmd [[colorscheme catppuccin]]
 
-function string.starts(self, str)
-  return self:find("^" .. str) ~= nil
-end
-
-local hide = function()
-  local home = vim.fn.expand("$HOME") .. "/Code/git/"
-  local dataconfig = vim.fn.expand("$HOME") .. "/.local/share/"
-  local configdir = vim.fn.expand("$HOME") .. "/.config/"
-  local blacklistDir = {
-    [vim.fn.resolve(home .. "Personal")] = "Breaking stuff.",
-    [vim.fn.resolve(configdir .. "lvim/config.lua")] = "Breaking neovim config",
-    [vim.fn.resolve(dataconfig .. "/lunarvim/lvim")] = "Breaking neovim config"
-  }
-
-  local current_file = vim.fn.expand("%:p")
-  for k, v in pairs(blacklistDir) do
-    if current_file:starts(k) then
-      return v
-    end
-  end
-  return false
-end
-
-require("presence"):setup({
-  auto_update        = true,
-  neovim_image_text  = "idk it just works",
-  main_image         = "file",
-  -- client_id           = "793271441293967371",
-  log_level          = nil,
-  debounce_timeout   = 10,
-  enable_line_number = false,
-  blacklist          = {}, -- A list of strings or Lua patterns that disable Rich Presence if the current file name, path, or workspace matches
-
-  buttons             = function(repo)
-    if repo == nil then
-      return false
-    end
-    local visible = {
-      "github.com/catppuccin",
-      "github.com/ghostx31",
-    }
-
-    for _, visible_url in ipairs(visible) do
-      if repo:find(visible_url) then
-        return {
-          {
-            label = "Checkout the repository",
-            url = repo,
-          },
-        }
-      end
-    end
-    return false
-  end,
-  editing_text        = function(s)
-    local hidden = hide()
-    if hidden then
-      return hidden
-    end
-    return "Writing in " .. s
-  end,
-  git_commit_text     = "Committing changes", -- Format string rendered when committing changes in git (either string or function(filename: string): string)
-  plugin_manager_text = "Managing plugins", -- Format string rendered when managing plugins (either string or function(plugin_manager_name: string): string)
-  vimsence_client_id  = '439476230543245312',
-  reading_text        = function(s)
-    local hidden = hide()
-    if hidden then
-      return hidden
-    end
-    return "Reading in " .. s
-  end,
-  file_explorer_text  = function(s)
-    local hidden = hide()
-    if hidden then
-      return hidden
-    end
-    return "Browsing in " .. s
-  end,
-  workspace_text      = function(s)
-    local hidden = hide()
-    if s ~= nil and not hidden then
-      return "Working in " .. s
-    else
-      return nil
-    end
-  end,
-  line_number_text    = "Line %s out of %s", -- Format string rendered when `enable_line_number` is set to true (either string or function(line_number: number, line_count: number): string)
-})
-
--- require 'lspconfig'.marksman.setup {}
-require("indent_blankline").setup {
-  show_current_context = true,
-  show_current_context_start = true,
-  space_char_blankline = " ",
-  char_highlight_list = {
-    "IndentBlanklineIndent1",
-    "IndentBlanklineIndent2",
-    "IndentBlanklineIndent3",
-    "IndentBlanklineIndent4",
-    "IndentBlanklineIndent5",
-    "IndentBlanklineIndent6",
-  },
-}
