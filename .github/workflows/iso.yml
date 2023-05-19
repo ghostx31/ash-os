@@ -17,7 +17,7 @@ jobs:
           submodules: true
       - name: Build Docker container 
         run: |
-          docker build --rm -t ash-os:latest .
+          docker build --rm --network=host -t ash-os:latest .
       - name: Run Docker container 
         run: | 
           docker run -v $(pwd)/out:/build/out --privileged ash-os:latest
